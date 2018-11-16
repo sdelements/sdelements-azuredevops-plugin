@@ -1,2 +1,2 @@
-# azurepipelines
-An Azure Pipeline plugin for SD Elements
+# SD Elements Azure DevOps plugin
+An Azure DevOps build pipeline plugin to SD Elements
