@@ -1,0 +1,95 @@
+{
+    "manifestVersion": 1,
+    "id": "sdelements",
+    "version": "0.1.7",
+    "name": "SD Elements Integration",
+    "publisher": "securitycompass",
+    "description": "Security Compass SD Elements Platform Integration",
+    "targets": [
+        {
+          "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "tags": [
+        "security",
+        "release",
+        "devsecops",
+        "continuous integration",
+        "deploy task"
+    ],
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "static/images/sde.png"
+    },
+    "files": [
+        {
+            "path": "SDElementsProjectRiskCheck"
+        }
+    ],
+    "links": {
+        "home": {
+            "uri": "https://www.securitycompass.com/sdelements/"
+        }
+    },
+    "contributions": [
+        {
+            "id": "SDElementsProjectRiskCheck",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "SDElementsProjectRiskCheck"
+            }
+        },
+        {
+            "id": "service-endpoint",
+            "description": "Service Endpoint type for SD Elements connections",
+            "type": "ms.vss-endpoint.service-endpoint-type",
+            "targets": [ "ms.vss-endpoint.endpoint-types" ],
+            "properties": {
+              "name": "SDElements",
+              "displayName": "SD Elements",
+              "url": {
+                "displayName": "Server Url",
+                "helpText": "URL for the SD Elements server to connect to."
+              },
+              "dataSources": [
+                {
+                  "name": "TestConnection",
+                  "endpointUrl": "{{{endpoint.url}}}api/v2/users/me/",
+                  "resultSelector": "jsonpath:$.values[*]"
+                }
+
+              ],
+              "authenticationSchemes": [
+                {
+                  "type": "ms.vss-endpoint.endpoint-auth-scheme-token",
+                  "inputDescriptors": [
+                    {
+                      "id": "apitoken",
+                      "name": "API Token",
+                      "description": "API key for connection",
+                      "inputMode": "textbox",
+                      "isConfidential": true,
+                      "validation": {
+                        "isRequired": true,
+                        "dataType": "string"
+                      }
+                    }
+                  ],
+                  "headers": [
+                    {
+                      "name": "Authorization",
+                      "value": "Token {{endpoint.apitoken}}"
+                    }
+                  ]
+                }
+              ],
+              "helpMarkDown": "This is help"
+            }
+          }
+    ]
+}

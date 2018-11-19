@@ -1,0 +1,21 @@
+{
+  "name": "vsts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "azure-devops-extension-sdk": "^2.0.3",
+    "azure-pipelines-task-lib": "^2.7.4",
+    "request": "^2.85.0",
+    "tfx-cli": "^0.6.3"
+  },
+  "scripts": {
+    "build": "npm run package",
+    "package": "tfx extension create",
+    "gallery-publish": "tfx extension publish --rev-version",
+    "clean": "rimraf ./dist && rimraf ./*.vsix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

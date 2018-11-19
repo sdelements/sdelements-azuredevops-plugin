@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "iojs"
+
+install:
+- cd src
+- npm install;
+- npm i -g tfx-cli;
+
+script:
+- tfx extension create
