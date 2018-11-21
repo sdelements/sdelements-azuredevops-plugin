@@ -1,10 +1,13 @@
 {
     "manifestVersion": 1,
     "id": "sdelements",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "name": "SD Elements Integration",
     "publisher": "securitycompass",
     "description": "Security Compass SD Elements Platform Integration",
+    "galleryFlags": [
+        "Public"
+    ],
     "targets": [
         {
           "id": "Microsoft.VisualStudio.Services"
