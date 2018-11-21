@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "sdelements",
-    "version": "0.1.7",
+    "version": "0.1.11",
     "name": "SD Elements Integration",
     "publisher": "securitycompass",
     "description": "Security Compass SD Elements Platform Integration",
@@ -20,6 +20,11 @@
     "categories": [
         "Azure Pipelines"
     ],
+    "content": {
+      "details": {
+        "path": "overview.md"
+      }
+    },
     "icons": {
         "default": "static/images/sde.png"
     },
@@ -31,6 +36,9 @@
     "links": {
         "home": {
             "uri": "https://www.securitycompass.com/sdelements/"
+        },
+        "getstarted": {
+            "uri": "https://github.com/sdelements/sdelements-azuredevops-plugin/wiki/Getting-Started"
         }
     },
     "contributions": [
@@ -87,8 +95,7 @@
                     }
                   ]
                 }
-              ],
-              "helpMarkDown": "This is help"
+              ]
             }
           }
     ]

@@ -16,6 +16,10 @@
     "clean": "rimraf ./dist && rimraf ./*.vsix"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Security Compass Limited",
+  "license": "MIT",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/sdelements/sdelements-azuredevops-plugin"
+  }
 }
