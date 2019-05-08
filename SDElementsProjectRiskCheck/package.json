@@ -1,0 +1,13 @@
+{
+  "description": "SD Elements Project Risk Check",
+  "dependencies": {
+    "azure-devops-extension-sdk": "^2.0.3",
+    "azure-pipelines-task-lib": "^2.7.4",
+    "request": "^2.85.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdelements/sdelements-azuredevops-plugin"
+  }
+}
